@@ -1,106 +1,64 @@
+# Foodi
 
-Foodi is a beautifully designed cross-platform food delivery app built using **React Native**. It allows users to browse delicious meals, view detailed information, place orders, and track delivery—all from their mobile device.
-
----
-
-## 🚀 Features
-
-- 🔐 **Authentication** (Login/Register)
-- 🏠 **Home Screen** with food categories & popular items
-- 🍕 **Food Detail Screen** with image, description & price
-- 📦 **Order Summary & Delivery Info**
-- ✅ **Success Screen** after placing order
-- 🧾 **Order History**
-- 🔄 Smooth navigation experience
-- 📦 Firebase integration (Authentication / Data Storage)
+Cross-platform food-ordering mobile app built with React Native, TypeScript and Firebase Authentication.
 
 ---
 
-## 🖼️ Screenshots
+## Features
 
+- Email/password registration and login with Firebase Authentication
+- Splash screen and home screen with food categories and popular items
+- Food detail screen with image, description and price
+- Order summary and delivery-information flow
+- Order confirmation screen
+- Order history screen
+- Stack-based navigation with React Navigation
 
-| Splash | Login | Home | Food Details |
-|-------|-------|------|---------------|
-| ![splash](assets/screens/splash.png) | ![login](assets/screens/login.png) | ![home](assets/screens/home.png) | ![details](assets/screens/details.png) |
+## Tech Stack
 
----
+| Area | Technology |
+|---|---|
+| Framework | React Native 0.79 (bare workflow), TypeScript |
+| Navigation | React Navigation |
+| Auth | Firebase Authentication (`@react-native-firebase/auth`) |
+| Tooling | Metro, ESLint, Prettier, Jest |
 
-## 🛠️ Technologies Used
-
-- **React Native** (TypeScript)
-- **React Navigation**
-- **Firebase** (Auth, Firestore, Hosting)
-- **Expo CLI / Metro Bundler**
-- **Custom UI Design**
-- **Git & GitHub**
-
----
-
-## 📦 Folder Structure
+## Project Structure
 
 ```
+src/
+├── firebase/       # Firebase initialisation
+├── navigation/     # AppNavigator
+└── screens/        # Splash, Login, Register, Home, FoodDetail,
+                    # OrderSummary, DeliveryInfo, Success, OrderHistory
+assets/images/      # app images and icons
+android/, ios/      # native projects
+App.tsx             # entry point
+```
 
-Foodi/
-├── assets/               # App images/icons
-├── src/
-│   ├── firebase/         # Firebase config
-│   ├── navigation/       # AppNavigator
-│   ├── screens/          # All screen components
-│   └── ...               # Other logic files
-├── android/              # Android native code
-├── ios/                  # iOS native code
-├── App.tsx               # Entry point
-└── package.json
+## Getting Started
 
-````
+### Prerequisites
 
----
+- Node.js and npm
+- Android Studio (Android) and/or Xcode (iOS, macOS only)
+- A Firebase project with Email/Password authentication enabled, with its config files added to the native projects (`google-services.json` for Android, `GoogleService-Info.plist` for iOS)
 
-## ▶️ How to Run Locally
-
-### Prerequisites:
-- Node.js & npm installed
-- Android Studio / Xcode set up
-- Firebase project created
-
-### Setup:
+### Run
 
 ```bash
-git clone https://github.com/your-username/Foodi.git
+git clone https://github.com/NurSayed42/Foodi.git
 cd Foodi
 npm install
-````
 
-### For Android:
-
-```bash
 npx react-native run-android
-```
-
-### For iOS (Mac Only):
-
-```bash
+# or, on macOS
+cd ios && pod install && cd ..
 npx react-native run-ios
 ```
 
----
+See the React Native [troubleshooting guide](https://reactnative.dev/docs/troubleshooting) if the build fails.
 
-## 🧠 Credits
+## Author
 
-This app is built by **NurSayed** 👨‍💻 with ❤️
-Feel free to contribute, fork, or suggest improvements!
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
-
+**Nur Sayed** — [GitHub](https://github.com/NurSayed42)
